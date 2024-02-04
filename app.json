@@ -5,9 +5,29 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "@config-plugins/react-native-ble-plx"
+      ],
+      "react-native-background-fetch"
     ],
     "name": "application",
-    "slug": "application"
+    "slug": "application",
+    "android": {
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT"
+      ],
+      "package": "Diabetes.Management.system"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "c7fee2af-7d2a-4e4b-9250-38b966b2e1dd"
+      }
+    }
   }
 }
